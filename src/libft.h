@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 14:14:07 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:27:10 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <ctype.h>
-#include "libft.h"
+
+#include "libft.h" // To exclude when finish
 
 int	ft_atoi(char *nbr);
 void	*ft_bzero(void *buff, size_t n);

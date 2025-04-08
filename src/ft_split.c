@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 14:37:29 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 20:27:14 by dximenes         ###   ########.fr       */
+/*   Created: 2025/04/08 20:28:58 by dximenes          #+#    #+#             */
+/*   Updated: 2025/04/08 20:47:36 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+char **ft_split(char const *s, char c)
 {
-	size_t end;
-	size_t init;
-	size_t lstr;
+	size_t i;
 
-	lstr = ft_strlen((char *)s1);
-	init = 0;
-	while (ft_strchr((char *)set, s1[init]))
-		init++;
-	end = 0;
-	while (ft_strchr((char *)set, s1[lstr - end - 1]))
-		end++;
-	return (ft_substr((char *)s1, init, lstr - end));
+	
+}
+
+int	main(void)
+{
+	char	str[] = {"test1 test2 test3 test4 test5"};
+	char	sep = " ";
+	char	**res = ft_split(str, sep);
+	for (int i = 0; res[i]; i++)
+		printf("%s\n", res[i]);
 }
