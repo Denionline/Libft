@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 13:41:09 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 15:34:39 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:36:50 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	size_t ls;
-	size_t i;
+	size_t	ls;
+	size_t	i;
 
 	ls = ft_strlen((char *)s);
 	str = (char *)malloc((ls + 1) * sizeof(char));

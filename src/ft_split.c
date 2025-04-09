@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:28:58 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 18:22:32 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:37:58 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ size_t	ft_countwords(char *str, char sep)
 	return (cnt);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	size_t 	lword;
-	size_t 	i;
-	
+	size_t	lword;
+	size_t	i;
+
 	lword = ft_countwords((char *)s, c);
 	strs = (char **)malloc((ft_countwords((char *)s, c) + 1) * sizeof(char *));
 	if (!strs)

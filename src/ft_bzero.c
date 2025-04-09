@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 17:02:37 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 18:38:15 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:50:45 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	*ft_bzero(void *s, size_t n)
 		str[i] = 0;
 		i++;
 	}
+	return (s);
 }

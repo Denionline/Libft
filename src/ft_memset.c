@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:49:15 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 19:01:58 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:51:02 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*s_s;
-	int				i;
+	size_t			i;
 
 	s_s = (unsigned char *)s;
 	i = 0;
@@ -24,4 +24,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		s_s[i] = c;
 		i++;
 	}
+	return (s);
 }

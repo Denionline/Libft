@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:39:07 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 15:14:46 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:44:35 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 int	ft_atoi(const char *nbr)
 {
 	char	*s_nbr;
-	size_t res;
-	size_t sig;
-	size_t neg;
-	size_t i;
+	size_t	res;
+	size_t	sig;
+	size_t	neg;
+	size_t	i;
 
 	s_nbr = (char *)nbr;
 	sig = 0;
@@ -32,9 +32,9 @@ int	ft_atoi(const char *nbr)
 		i++;
 	while (s_nbr[i] == '+' || s_nbr[i] == '-')
 	{
+		sig++;
 		if (s_nbr[i++] == '-')
 			neg = 1;
-		sig++;		
 		if (sig > 1)
 			return (0);
 	}

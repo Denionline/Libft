@@ -66,6 +66,7 @@
     "stddef.h": "c",
     "stdlib.h": "c",
     "assert.h": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "array": "c"
   }
 }

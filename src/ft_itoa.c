@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 13:29:18 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:42:45 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,19 @@ int	ft_getsize(long int nbr)
 	int	i;
 
 	i = 1;
-	while (nbr /= 10)
+	while (nbr >= 10)
+	{
+		nbr /= 10;
 		i++;
+	}
 	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t 	size;
-	size_t 	neg;
+	char		*str;
+	size_t		size;
+	size_t		neg;
 	long int	nlong;
 
 	nlong = n;

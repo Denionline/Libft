@@ -3,7 +3,7 @@
 # **************************************************************************** #
 
 MAKE		= make
-SHELL	= bash
+SHELL		= bash
 
 # **************************************************************************** #
 #                                    Names                                     #
@@ -36,6 +36,8 @@ FILES		+= ft_strlcpy.c
 FILES		+= ft_substr.c
 FILES		+= ft_strtrim.c
 FILES		+= ft_strchr.c
+FILES		+= ft_split.c
+FILES		+= ft_strrchr.c
 FILES		+= ft_strnstr.c
 FILES		+= ft_strmapi.c
 FILES		+= ft_strjoin.c
@@ -53,9 +55,10 @@ FILES		+= ft_putstr_fd.c
 FILES		+= ft_putendl_fd.c
 FILES		+= ft_putnbr_fd.c
 FILES		+= ft_memset.c
+FILES		+= ft_memchr.c
 
 SRC			= $(addprefix $(SRC_PATH)/, $(FILES))
-OBJS		= $(SRC: $(SRC_PATH)/.c=$(BUILD_PATH)/%.o)
+OBJS		= $(SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
 
 # **************************************************************************** #
 #                                     Compiler                                 #
@@ -80,20 +83,23 @@ MKDIR		= mkdir
 all: $(BUILD_PATH) $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@echo "Creating arquive $(NAME)"
+	@$(AR) $(NAME) $(OBJS)
 
 $(BUILD_PATH):
-	$(MKDIR) $(BUILD_PATH)
+	@echo "Creating ./.build..."
+	@$(MKDIR) $(BUILD_PATH)
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
-	$(CC) $(CFLAGS) $(INC) -c $< -o $@
+	@echo "Compiling $(<)"
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	$(RM) $(BUILD_PATH)
+	@echo "Removing ./.build..."
+	@$(RM) $(BUILD_PATH)
 
 fclean:
-	$(RM) ${NAME}
+	@echo "Removing $(NAME)"
+	@$(RM) ${NAME}
 
 re: clean all
-
-.PHONY: all clean fclean re

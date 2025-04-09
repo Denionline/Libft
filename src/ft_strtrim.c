@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:37:29 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 20:27:14 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:36:23 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t end;
-	size_t init;
-	size_t lstr;
+	size_t	end;
+	size_t	init;
+	size_t	lstr;
 
 	lstr = ft_strlen((char *)s1);
 	init = 0;
