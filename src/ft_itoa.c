@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 21:42:45 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 23:11:15 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ char	*ft_itoa(int n)
 	if (nlong < 0)
 		nlong *= -1;
 	size = ft_getsize(nlong) + neg;
-	str = (char *)malloc((size + 1) * sizeof(char));
+	str = (char *)malloc(size + 1);
+	str[0] = '\0';
 	if (!str)
 		return (NULL);
 	ft_memset(str, '-', size);
-	str[size + 1] = '\0';
+	str[size] = '\0';
 	while (size > neg)
 	{
 		str[(size--) - 1] = nlong % 10 + '0';
