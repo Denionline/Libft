@@ -6,39 +6,41 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:39:07 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 10:14:34 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:14:46 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <ctype.h>
+#include <unistd.h>
 
-int	ft_atoi(char *nbr)
+int	ft_atoi(const char *nbr)
 {
+	char	*s_nbr;
 	size_t res;
 	size_t sig;
 	size_t neg;
 	size_t i;
 
+	s_nbr = (char *)nbr;
 	sig = 0;
 	i = 0;
-	while ((nbr[i] >= '\a' && nbr[i] <= '\r') || nbr[i] == ' ')
+	while ((s_nbr[i] >= '\a' && s_nbr[i] <= '\r') || s_nbr[i] == ' ')
 		i++;
-	while (nbr[i] == '+' || nbr[i] == '-')
+	while (s_nbr[i] == '+' || s_nbr[i] == '-')
 	{
-		if (nbr[i] == '-')
+		if (s_nbr[i++] == '-')
 			neg = 1;
 		sig++;		
 		if (sig > 1)
 			return (0);
-		i++;
 	}
 	res = 0;
-	while (nbr[i] && (nbr[i] >= '0' && nbr[i] <= '9'))
-	{
-		res *= 10;
-		res += nbr[i] - '0';
-		i++; 
-	}
+	while (s_nbr[i] && (s_nbr[i] >= '0' && s_nbr[i] <= '9'))
+		res = (res * 10) + (s_nbr[i++] - '0');
 	if (neg)
 		return (-res);
 	return (res);

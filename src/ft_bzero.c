@@ -6,22 +6,22 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 17:02:37 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 19:21:07 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:38:15 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *buff, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char	*string;
-	int				i;
+	unsigned char	*str;
+	size_t			i;
 
-	string = (unsigned char *)buff;
+	str = (unsigned char *)s;
 	i = 0;
-	while (string[i] && i < n)
+	while (i < n)
 	{
-		string[i] = string[(n - 1) + i];
+		str[i] = 0;
 		i++;
 	}
 }

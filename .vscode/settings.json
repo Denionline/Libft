@@ -64,6 +64,8 @@
     "random": "c",
     "sstream": "c",
     "stddef.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "assert.h": "c",
+    "ctype.h": "c"
   }
 }
