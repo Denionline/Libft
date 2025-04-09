@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 18:26:22 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/06 11:51:24 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 09:58:16 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	
    if (str_d == str_s || n == 0)
       return dest;
-
    if (str_d < str_s)
    {
       i = 0;

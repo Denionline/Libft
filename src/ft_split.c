@@ -6,87 +6,37 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:28:58 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/08 23:12:19 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 10:49:46 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-char	*ft_substr(char *s, unsigned int start, size_t len)
-{
-	char	*str;
-	size_t i;
-
-	str = (char *)malloc((len + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		str[i] = s[start + i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-size_t	ft_countwords(char *str, char sep)
-{
-	size_t cnt;
-	size_t	i;
-
-	cnt = 0;
-	i = 0;
-	while (str[i])
-	{
-		while (str[i] == sep)
-			i++;
-		if (str[i] && str[i] != sep)
-			cnt++;
-		while (str[i] && str[i] != sep)
-			i++;
-	}
-	return (cnt);
-}
+#include "libft.h"
 
 char **ft_split(char const *s, char c)
 {
-	size_t n;
-	size_t j;
-	size_t i;
-	size_t nwords;
 	char	**strs;
+	size_t 	lword;
+	size_t 	i;
 	
-	nwords = ft_countwords((char *)s, c);
-	strs = (char **)malloc((nwords + 1) * sizeof(char *));
+	lword = ft_countwords((char *)s, c);
+	strs = (char **)malloc((ft_countwords((char *)s, c) + 1) * sizeof(char *));
+	if (!strs)
+		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (*s)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		while (s[i] != c && j < nwords)
+		while (*s && *s == c)
+			s++;
+		if (*s != c)
 		{
-			n = 0;
-			while (s[i] && s[i] != c)
-			{
-				n++;
-				i++;
-			}
-			strs[j] = ft_substr((char *)s, i - n, n);
-			j++;
+			if (!ft_strchr((char *)s, c))
+				lword = ft_strlen((char *)s);
+			else
+				lword = ft_strchr((char *)s, c) - s;
+			strs[i++] = ft_substr((char *)s, 0, lword);
+			s += lword;
 		}
 	}
-	strs[j] = '\0';
+	strs[i] = NULL;
 	return (strs);
-}
-
-int	main(void)
-{
-	char	str[] = {" test1 test2 test3 test4 test5 "};
-	char	sep = ' ';
-	char	**res = ft_split(str, sep);
-	for (int i = 0; res[i]; i++)
-		printf("%s\n", res[i]);
 }

@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:49:15 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/07 19:46:11 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:27:49 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *buff, int c, size_t n)
 
 	string = (unsigned char *)buff;
 	i = 0;
-	while (string[i] && i < n)
+	while (i < n)
 	{
 		string[i] = c;
 		i++;
