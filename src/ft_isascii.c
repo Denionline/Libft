@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:51:31 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/05 14:16:14 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/08 22:35:29 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,5 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 255)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }
