@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 15:46:59 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 17:44:41 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char	*ft_itoa(int n)
 		nlong *= -1;
 	size = ft_getsize(nlong) + neg;
 	str = (char *)malloc(size + 1);
-	str[0] = '\0';
 	if (!str)
 		return (NULL);
 	ft_memset(str, '-', size);

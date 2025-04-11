@@ -6,33 +6,50 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:39:07 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 15:46:30 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 17:12:36 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nbr)
+static size_t	ft_countsig(char *nptr)
 {
-	char	*s_nbr;
-	size_t	res;
-	size_t	neg;
+	size_t	count;
 	size_t	i;
 
-	s_nbr = (char *)nbr;
-	neg = 1;
+	count = 0;
 	i = 0;
-	while ((s_nbr[i] >= '\t' && s_nbr[i] <= '\r') || s_nbr[i] == ' ')
-		i++;
-	if (s_nbr[i] == '+')
-		i++;
-	if (s_nbr[i++] == '-')
-		neg = -1;
-	res = 0;
-	while (s_nbr[i] && ft_isdigit(s_nbr[i]))
+	while (nptr[i])
 	{
-		res = (res * 10) + (s_nbr[i] - '0');
+		if (nptr[i] == '+' || nptr[i] == '-')
+			count++;
 		i++;
+	}
+	return (count);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	size_t	res;
+	size_t	neg;
+
+	neg = 1;
+	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
+		nptr++;
+	if (ft_countsig((char *)nptr) > 1)
+		return (0);
+	if (*nptr == '+')
+		nptr++;
+	if (*nptr == '-')
+	{
+		neg = -1;
+		nptr++;
+	}
+	res = 0;
+	while (*nptr && ft_isdigit(*nptr))
+	{
+		res = (res * 10) + (*nptr - '0');
+		nptr++;
 	}
 	return (res * neg);
 }
