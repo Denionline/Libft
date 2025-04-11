@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:39:07 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 17:12:36 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 18:33:03 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static size_t	ft_countsig(char *nptr)
 	i = 0;
 	while (nptr[i])
 	{
+		if (ft_isdigit(nptr[i]))
+			break ;
 		if (nptr[i] == '+' || nptr[i] == '-')
 			count++;
 		i++;
