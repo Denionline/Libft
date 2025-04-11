@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 18:11:15 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 16:14:49 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:26:34 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (dst[ldst] && ldst < size)
 		ldst++;
 	if (ldst == size)
-		return (lsrc + size);
+		return (lsrc + ldst);
 	i = 0;
 	while (s_src[i] && ((ldst + i) + 1) < size)
 	{

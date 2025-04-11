@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:11:28 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 22:22:37 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 10:56:46 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
 	if ((char)c == '\0')
 		return ((char *)s);

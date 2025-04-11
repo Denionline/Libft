@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 20:28:58 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 22:42:44 by dximenes         ###   ########.fr       */
+/*   Created: 2025/04/11 16:41:11 by dximenes          #+#    #+#             */
+/*   Updated: 2025/04/11 16:41:48 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countwords(char *str, char sep)
+static size_t	ft_countwords(char *str, char sep)
 {
 	size_t	cnt;
 	size_t	i;
@@ -31,31 +31,60 @@ size_t	ft_countwords(char *str, char sep)
 	return (cnt);
 }
 
+static size_t	ft_getlenword(char *s, char c)
+{
+	size_t	length;
+
+	length = 0;
+	if (!ft_strchr((char *)s, c))
+		length = (ft_strlen((char *)s));
+	else
+		length = (ft_strchr((char *)s, c) - s);
+	return (length);
+}
+
+static char	**ft_checkstrs(char **strs, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n && strs[i] != NULL)
+		i++;
+	if (i == n)
+		return (strs);
+	i = 0;
+	while (i < n)
+	{
+		if (strs[i] != NULL)
+			free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	lword;
+	size_t	count;
 	size_t	i;
 
-	lword = ft_countwords((char *)s, c);
-	strs = (char **)malloc((lword + 1) * sizeof(char *));
+	count = ft_countwords((char *)s, c);
+	strs = (char **)malloc((count + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
+	lword = 0;
 	i = 0;
 	while (*s)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s && *s != c)
-		{
-			if (!ft_strchr((char *)s, c))
-				lword = ft_strlen((char *)s);
-			else
-				lword = ft_strchr((char *)s, c) - s;
+		lword = ft_getlenword((char *)s, c);
+		if (*s)
 			strs[i++] = ft_substr((char *)s, 0, lword);
-			s += lword;
-		}
+		s += lword;
 	}
 	strs[i] = NULL;
-	return (strs);
+	return (ft_checkstrs(strs, count));
 }

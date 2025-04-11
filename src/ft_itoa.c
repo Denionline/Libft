@@ -6,13 +6,13 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 23:11:15 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/11 15:46:59 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_getsize(long int nbr)
+static int	ft_getsize(long int nbr)
 {
 	int	i;
 
@@ -27,10 +27,10 @@ int	ft_getsize(long int nbr)
 
 char	*ft_itoa(int n)
 {
-	char		*str;
+	long int	nlong;
 	size_t		size;
 	size_t		neg;
-	long int	nlong;
+	char		*str;
 
 	nlong = n;
 	neg = nlong < 0;
