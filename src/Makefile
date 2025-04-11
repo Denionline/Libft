@@ -15,9 +15,9 @@ NAME		= libft.a
 #                                     Paths                                    #
 # **************************************************************************** #
 
-SRC_PATH	= .
-INC_PATH	= .
-BUILD_PATH	= .build
+SRC_PATH		= .
+INC_PATH		= .
+BUILD_PATH		= .build
 
 FILES		= ft_isalnum.c
 FILES		+= ft_isalpha.c
@@ -60,6 +60,12 @@ FILES		+= ft_memchr.c
 SRC			= $(addprefix $(SRC_PATH)/, $(FILES))
 OBJS		= $(SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
 
+BONUS_FILES	= ft_lstnew.c
+
+BONUS_SRC	= $(addprefix $(SRC_PATH)/, $(BONUS_FILES))
+BONUS_OBJS	= $(BONUS_SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
+
+
 # **************************************************************************** #
 #                                     Compiler                                 #
 # **************************************************************************** #
@@ -85,10 +91,15 @@ all: $(BUILD_PATH) $(NAME)
 $(NAME): $(OBJS)
 	@echo "Creating arquive $(NAME)"
 	@$(AR) $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 $(BUILD_PATH):
 	@echo "Creating ./.build..."
 	@$(MKDIR) $(BUILD_PATH)
+
+bonus: $(BONUS_OBJS) $(NAME)
+	@echo "Making bonus..."
+	@$(AR) $(NAME) $(BONUS_OBJS)
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
 	@echo "Compiling $(<)"
