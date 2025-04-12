@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 16:41:11 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 16:41:48 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:15:29 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ static size_t	ft_getlenword(char *s, char c)
 
 	length = 0;
 	if (!ft_strchr((char *)s, c))
-		length = (ft_strlen((char *)s));
+		length = ft_strlen((char *)s);
 	else
-		length = (ft_strchr((char *)s, c) - s);
+		length = (size_t)(ft_strchr((char *)s, c) - s);
 	return (length);
 }
 

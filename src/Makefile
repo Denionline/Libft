@@ -17,7 +17,6 @@ NAME		= libft.a
 
 SRC_PATH		= .
 INC_PATH		= .
-BUILD_PATH		= .build
 
 FILES		= ft_isalnum.c
 FILES		+= ft_isalpha.c
@@ -58,12 +57,20 @@ FILES		+= ft_memset.c
 FILES		+= ft_memchr.c
 
 SRC			= $(addprefix $(SRC_PATH)/, $(FILES))
-OBJS		= $(SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
+OBJS		= $(SRC:$(SRC_PATH)/%.c=$(SRC_PATH)/%.o)
 
 BONUS_FILES	= ft_lstnew.c
+BONUS_FILES	+= ft_lstadd_front.c
+BONUS_FILES	+= ft_lstsize.c
+BONUS_FILES	+= ft_lstlast.c
+BONUS_FILES	+= ft_lstadd_back.c
+BONUS_FILES	+= ft_lstdelone.c
+BONUS_FILES	+= ft_lstclear.c
+BONUS_FILES	+= ft_lstiter.c
+BONUS_FILES	+= ft_lstmap.c
 
 BONUS_SRC	= $(addprefix $(SRC_PATH)/, $(BONUS_FILES))
-BONUS_OBJS	= $(BONUS_SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
+BONUS_OBJS	= $(BONUS_SRC:$(SRC_PATH)/%.c=$(SRC_PATH)/%.o)
 
 
 # **************************************************************************** #
@@ -86,28 +93,24 @@ MKDIR		= mkdir
 #                                      Rules                                   #
 # **************************************************************************** #
 
-all: $(BUILD_PATH) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "Creating arquive $(NAME)"
 	@$(AR) $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
-$(BUILD_PATH):
-	@echo "Creating ./.build..."
-	@$(MKDIR) $(BUILD_PATH)
-
 bonus: $(BONUS_OBJS) $(NAME)
 	@echo "Making bonus..."
 	@$(AR) $(NAME) $(BONUS_OBJS)
 
-$(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
+$(SRC_PATH)/%.o: $(SRC_PATH)/%.c
 	@echo "Compiling $(<)"
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	@echo "Removing ./.build..."
-	@$(RM) $(BUILD_PATH)
+	@echo "Removing objects"
+	@$(RM) $(OBJS)
 
 fclean:
 	@echo "Removing $(NAME)"

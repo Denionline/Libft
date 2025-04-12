@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:39:07 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 18:33:03 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:06:16 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ static size_t	ft_countsig(char *nptr)
 
 int	ft_atoi(const char *nptr)
 {
-	size_t	res;
-	size_t	neg;
+	int		res;
+	int		neg;
 
 	neg = 1;
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')

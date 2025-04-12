@@ -6,15 +6,15 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 17:44:41 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:18:34 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_getsize(long int nbr)
+static size_t	ft_getsize(long int nbr)
 {
-	int	i;
+	size_t	i;
 
 	i = 1;
 	while (nbr >= 10)
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	str[size] = '\0';
 	while (size > neg)
 	{
-		str[(size--) - 1] = nlong % 10 + '0';
+		str[(size--) - 1] = (char)(nlong % 10 + '0');
 		nlong /= 10;
 	}
 	return (str);

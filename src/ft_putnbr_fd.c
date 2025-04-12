@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:56:18 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 21:39:30 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:13:30 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_putnbr_fd(int n, int fd)
 		nlong *= -1;
 	}
 	if (nlong >= 10)
-		ft_putnbr_fd(nlong / 10, fd);
-	ft_putchar_fd((nlong % 10) + '0', fd);
+		ft_putnbr_fd((int)(nlong / 10), fd);
+	ft_putchar_fd((char)(nlong % 10 + '0'), fd);
 }

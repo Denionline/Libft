@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:37:29 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 11:14:36 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:17:06 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	while (ft_strchr((char *)set, *end))
 		end--;
-	return (ft_substr((char *)s1, 0, end - s1 + 1));
+	return (ft_substr((char *)s1, 0, (size_t)(end - s1 + 1)));
 }

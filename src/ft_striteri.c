@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 13:57:23 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/11 11:06:56 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 11:16:02 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		f((unsigned int)i, &s[i]);
 		i++;
 	}
 }

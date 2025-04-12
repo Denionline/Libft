@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 13:23:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:31:45 by dximenes         ###   ########.fr       */
+/*   Created: 2025/04/12 14:07:15 by dximenes          #+#    #+#             */
+/*   Updated: 2025/04/12 18:12:56 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
-		return (1);
-	if ((char)c >= 'A' && (char)c <= 'Z')
-		return (1);
-	return (0);
+	if (lst && f)
+	{
+		while (lst != NULL)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
+	}
 }

@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 13:23:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:31:45 by dximenes         ###   ########.fr       */
+/*   Created: 2025/04/12 11:48:41 by dximenes          #+#    #+#             */
+/*   Updated: 2025/04/12 17:44:27 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
-		return (1);
-	if ((char)c >= 'A' && (char)c <= 'Z')
-		return (1);
-	return (0);
+	t_list	*node;
+
+	node = lst;
+	while (node->next != NULL)
+		node = node->next;
+	return (node);
 }

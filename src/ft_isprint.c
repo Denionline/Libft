@@ -6,15 +6,15 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:37:17 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 21:35:26 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 17:34:02 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
+	if ((char)c >= ' ' && (char)c <= '~')
 		return (1);
 	return (0);
 }
