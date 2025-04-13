@@ -56,8 +56,7 @@ FILES		+= ft_putnbr_fd.c
 FILES		+= ft_memset.c
 FILES		+= ft_memchr.c
 
-SRC			= $(addprefix $(SRC_PATH)/, $(FILES))
-OBJS		= $(SRC:$(SRC_PATH)/%.c=$(SRC_PATH)/%.o)
+OBJS		= $(FILES:%.c=%.o)
 
 BONUS_FILES	= ft_lstnew.c
 BONUS_FILES	+= ft_lstadd_front.c
@@ -69,8 +68,7 @@ BONUS_FILES	+= ft_lstclear.c
 BONUS_FILES	+= ft_lstiter.c
 BONUS_FILES	+= ft_lstmap.c
 
-BONUS_SRC	= $(addprefix $(SRC_PATH)/, $(BONUS_FILES))
-BONUS_OBJS	= $(BONUS_SRC:$(SRC_PATH)/%.c=$(SRC_PATH)/%.o)
+BONUS_OBJS	= $(BONUS_FILES:%.c=%.o)
 
 
 # **************************************************************************** #
@@ -79,7 +77,6 @@ BONUS_OBJS	= $(BONUS_SRC:$(SRC_PATH)/%.c=$(SRC_PATH)/%.o)
 
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
-INC			= -I $(INC_PATH)
 
 # **************************************************************************** #
 #                                     Comands                                  #
@@ -87,7 +84,6 @@ INC			= -I $(INC_PATH)
 
 RM			= rm -rf
 AR			= ar rcs
-MKDIR		= mkdir
 
 # **************************************************************************** #
 #                                      Rules                                   #
@@ -97,16 +93,17 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "Creating arquive $(NAME)"
+	@$(CC) $(CFLAGS) -c $(FILES)
 	@$(AR) $(NAME) $(OBJS)
-	@ranlib $(NAME)
 
-bonus: $(BONUS_OBJS) $(NAME)
-	@echo "bonus: Making bonus..."
-	@$(AR) $(NAME) $(BONUS_OBJS)
-
-$(SRC_PATH)/%.o: $(SRC_PATH)/%.c
+%.o:%.c
 	@echo "make: Compiling $(<)..."
-	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(NAME)
+	@echo "bonus: Making bonus..."
+	@$(CC) $(CFLAGS) -c $(BONUS_FILES)
+	@$(AR) $(NAME) $(BONUS_OBJS) $(OBJS)
 
 clean:
 	@echo "clean: Removing objects..."
@@ -116,4 +113,4 @@ fclean: clean
 	@echo "fclean: Removing $(NAME)..."
 	@$(RM) ${NAME}
 
-re: clean all
+re: fclean all
