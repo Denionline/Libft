@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:21:44 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 21:37:05 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:26:34 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	size_t	i;
 	size_t	ls1;
 	size_t	ls2;
-	size_t	i;
 	char	*str;
 
 	ls1 = ft_strlen((char *)s1);

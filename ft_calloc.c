@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 11:10:00 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/13 09:04:46 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:27:05 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t n_items, size_t size)
 	res = (void *) malloc(n_items * size);
 	if (!res)
 		return (NULL);
-	ft_memset(res, 0, (n_items * size));
+	ft_bzero(res, (n_items * size));
 	return (res);
 }
