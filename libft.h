@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/13 10:02:53 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:20:13 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <stddef.h>
-# include <ctype.h>
 # include <unistd.h>
 
 typedef struct s_list
