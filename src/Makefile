@@ -101,19 +101,19 @@ $(NAME): $(OBJS)
 	@ranlib $(NAME)
 
 bonus: $(BONUS_OBJS) $(NAME)
-	@echo "Making bonus..."
+	@echo "bonus: Making bonus..."
 	@$(AR) $(NAME) $(BONUS_OBJS)
 
 $(SRC_PATH)/%.o: $(SRC_PATH)/%.c
-	@echo "Compiling $(<)"
+	@echo "make: Compiling $(<)..."
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	@echo "Removing objects"
-	@$(RM) $(OBJS)
+	@echo "clean: Removing objects..."
+	@$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean:
-	@echo "Removing $(NAME)"
+fclean: clean
+	@echo "fclean: Removing $(NAME)..."
 	@$(RM) ${NAME}
 
 re: clean all

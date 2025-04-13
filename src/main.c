@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 10:38:04 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:37:55 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 09:13:55 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ int	main(void)
 	list->next = ft_lstnew("----Item 1-----");
 	list->next->next = ft_lstnew("----Item 2-----");
 	list->next->next->next = ft_lstnew("----Item 3-----");
-	
+
 	test_list(ft_lstmap(list, &access_content, &delete_node));
 }

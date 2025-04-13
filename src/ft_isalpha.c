@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:23:19 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:31:45 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/12 18:37:15 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isalpha(int c)
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (1);
-	if ((char)c >= 'A' && (char)c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }

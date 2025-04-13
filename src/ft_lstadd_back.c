@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 11:52:49 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:38:46 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 08:50:36 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
 
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
 	node = *lst;
 	while (node->next != NULL)
 		node = node->next;

@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:37:17 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:34:02 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 08:44:04 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if ((char)c >= ' ' && (char)c <= '~')
+	if (c >= ' ' && c <= '~')
 		return (1);
 	return (0);
 }

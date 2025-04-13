@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:38:11 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 17:32:15 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 08:34:44 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if ((char)c >= '0' && (char)c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

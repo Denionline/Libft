@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 11:10:00 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/09 18:34:11 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 09:04:46 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t n_items, size_t size)
 	void	*res;
 
 	if (n_items == 0 || size == 0)
-		return (NULL);
+		return (malloc(0));
 	res = (void *) malloc(n_items * size);
 	if (!res)
 		return (NULL);
