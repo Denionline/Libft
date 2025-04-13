@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 17:02:37 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/13 16:22:36 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:24:05 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	return (ft_memset(s, 0, n));
 }
