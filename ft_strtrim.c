@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:37:29 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/12 11:17:06 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:16:59 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	ls1;
 	char	*end;
 
+	if (!s1 || !set)
+		return (ft_strdup(""));
 	ls1 = ft_strlen((char *)s1);
 	end = (char *) s1 + ls1 - (*s1 != '\0');
 	while (ft_strchr((char *)set, *s1))
