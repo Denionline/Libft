@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/dximenes/x/Libft/src",
-      "program": "/home/dximenes/x/Libft/src/build/Debug/outDebug",
+      "cwd": "/home/dximenes/x/Libft",
+      "program": "/home/dximenes/x/Libft/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

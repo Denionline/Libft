@@ -90,10 +90,9 @@ $(NAME): $(OBJS)
 	@echo "make: Compiling $(<)..."
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(NAME)
+bonus: $(BONUS_OBJS)
 	@echo "bonus: Making bonus..."
-	@$(CC) $(CFLAGS) -c $(BONUS_FILES)
-	@$(AR) $(NAME) $(BONUS_OBJS) $(OBJS)
+	@make OBJS="$(BONUS_OBJS)" all
 
 clean:
 	@echo "clean: Removing objects..."
