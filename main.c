@@ -6,11 +6,11 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 20:31:28 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/22 20:46:13 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:41:16 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "include/libft.h"
 
 int	main(void)
 {
