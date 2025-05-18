@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/05/18 20:59:13 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/05/18 22:00:51 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	*ft_memset(void *buff, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 //bonus
-t_list	*ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content, int number);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
