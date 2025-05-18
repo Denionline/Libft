@@ -8,16 +8,36 @@ NAME= libft.a
 #                                    Colors                                    #
 # **************************************************************************** #
 
+P				= \033[
 
-COLOR_DEF_COLOR = \033[0;39m
-COLOR_GRAY = \033[0;90m
-COLOR_RED = \033[0;91m
-COLOR_GREEN = \033[0;92m
-COLOR_YELLOW = \033[0;93m
-COLOR_BLUE = \033[0;94m
-COLOR_MAGENTA = \033[0;95m
-COLOR_CYAN = \033[0;96m
-COLOR_WHITE = \033[0;97m
+C_STD			= $(P)0;39m
+
+
+C_GRAY			= 30m
+C_RED			= 31m
+C_GREEN			= 32m
+C_YELLOW		= 33m
+C_BLUE			= 34m
+C_MAGENTA		= 35m
+C_CYAN			= 36m
+C_WHITE			= 37m
+
+C_LGRAY			= 90m
+C_LRED			= 91m
+C_LGREEN		= 92m
+C_LYELLOW		= 93m
+C_LBLUE			= 94m
+C_LMAGENTA		= 95m
+C_LCYAN			= 96m
+C_LWHITE		= 97m
+
+W				= 0;
+N				= 1;
+O				= 2;
+I				= 3;
+S				= 4;
+F				= 5;
+T				= 9;
 
 # **************************************************************************** #
 #                                     Paths                                    #
@@ -99,8 +119,9 @@ OBJS := $(addprefix $(BUILD_PATH)/, $(addsuffix .o,$(SRC_FILES)))
 #                                     Compiler                                 #
 # **************************************************************************** #
 
-CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -I$(INCLUDE_PATH)
+cc			= cc
+CFLAGS		= -Wall -Wextra -Werror -I$(INCLUDE_PATH)
+MAKE		= make --no-print-directory
 
 # **************************************************************************** #
 #                                     Comands                                  #
@@ -119,13 +140,21 @@ all: $(BUILD_PATH) $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@printf "$(COLOR_GREEN)Created archive $(NAME)$(COLOR_DEF_COLOR)\n"
+	@printf "\n$(P)$(W)$(C_YELLOW)Success to create:$(P)$(W)$(C_STD)\n\n"
+	@printf "$(P)$(F)$(C_GREEN)\
+					| |   (_) |    / _| |  \n\
+					| |    _| |__ | |_| |_ \n\
+					| |   | | '_ \|  _| __|\n\
+					| |___| | |_) | | | |_ \n\
+					\_____/_|_.__/|_|  \__|\n\
+			\n$(C_STD)"
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@printf "$(COLOR_YELLOW)Compiled:$(COLOR_BLUE)$< → $@$(COLOR_DEF_COLOR)\n"
+	@printf "\r$(P)$(W)$(C_GREEN)✔ Compiled => $(P)$(W)$(C_BLUE)$< → $@$(P)$(W)$(C_STD)\n"
 
 $(BUILD_PATH):
+	@printf "\n$(P)$(W)$(C_CYAN)Building library...$(P)$(W)$(C_STD)\n"
 	@mkdir $(BUILD_PATH)
 	@mkdir $(BUILD_PATH)/$(FT_IS_PATH)
 	@mkdir $(BUILD_PATH)/$(FT_TO_PATH)
@@ -133,13 +162,13 @@ $(BUILD_PATH):
 	@mkdir $(BUILD_PATH)/$(FT_PUT_PATH)
 	@mkdir $(BUILD_PATH)/$(FT_MEM_PATH)
 	@mkdir $(BUILD_PATH)/$(FT_LST_PATH)
-	@printf "$(COLOR_CYAN)Created .build folders$(COLOR_DEF_COLOR)\n"
+
 clean:
 	@$(RM) $(BUILD_PATH)
-	@printf "$(COLOR_RED)Removed $(BUILD_PATH)$(COLOR_DEF_COLOR)\n"
+	@printf "\n$(P)$(W)$(C_RED)Removed $(BUILD_PATH)$(P)$(W)$(C_STD)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(COLOR_MAGENTA)Arquive $(NAME) removed!$(COLOR_DEF_COLOR)\n"
+	@printf "$(P)$(W)$(C_MAGENTA)Arquive $(NAME) removed!$(P)$(W)$(C_STD)\n"
 
 re: fclean all
