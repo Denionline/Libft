@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_htoi.c                                          :+:      :+:    :+:   */
+/*   ft_tobase.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 17:59:45 by dximenes          #+#    #+#             */
-/*   Updated: 2025/07/02 18:02:20 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/07/02 18:06:26 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int str_len(char * str)
+int str_len(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -22,10 +22,10 @@ int str_len(char * str)
 	return (i);
 }
 
-int is_invalid_base(char * base)
+int is_invalid_base(char *base)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (base[i] == '\0')
@@ -51,9 +51,9 @@ int is_invalid_base(char * base)
 	return (0);
 }
 
-int find_n_in_base(char pos, char * base)
+int find_n_in_base(char pos, char *base)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (base[i])
@@ -65,9 +65,9 @@ int find_n_in_base(char pos, char * base)
 	return (-1);
 }
 
-int skip_conditions(char * str, int * m)
+int skip_conditions(char *str, int *m)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	*m = 0;
@@ -82,13 +82,13 @@ int skip_conditions(char * str, int * m)
 	return (i);
 }
 
-int ft_atoi_base(char * str, char * base)
+int ft_tobase(char *str, char *base)
 {
-	int base_size;
-	int nbr_base;
-	int result;
-	int minus;
-	int i;
+	int	base_size;
+	int	nbr_base;
+	int	result;
+	int	minus;
+	int	i;
 
 	minus = 0;
 	if (is_invalid_base(base) || str_len(base) < 2)
