@@ -52,6 +52,7 @@ FT_TO_FILES		+= ft_toupper
 FT_TO_FILES		+= ft_tolower
 FT_TO_FILES		+= ft_atoi
 FT_TO_FILES		+= ft_itoa
+FT_TO_FILES		+= ft_tobase
 
 FT_STR_FILES	+= ft_strncmp
 FT_STR_FILES	+= ft_strlen
