@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tobase.c                                        :+:      :+:    :+:   */
+/*   ft_basetoi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 17:59:45 by dximenes          #+#    #+#             */
-/*   Updated: 2025/07/02 18:06:26 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/07/02 18:15:19 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int skip_conditions(char *str, int *m)
 	return (i);
 }
 
-int ft_tobase(char *str, char *base)
+int ft_basetoi(char *str, char *base)
 {
 	int	base_size;
 	int	nbr_base;
