@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/07/02 18:15:24 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/07/09 10:25:08 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdint.h>
+
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_list
 {
