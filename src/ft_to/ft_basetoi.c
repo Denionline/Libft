@@ -6,13 +6,13 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 17:59:45 by dximenes          #+#    #+#             */
-/*   Updated: 2025/07/02 18:15:19 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/07/09 09:59:41 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int str_len(char *str)
+static int str_len(char *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int str_len(char *str)
 	return (i);
 }
 
-int is_invalid_base(char *base)
+static int is_invalid_base(char *base)
 {
 	int	i;
 	int	j;
@@ -51,7 +51,7 @@ int is_invalid_base(char *base)
 	return (0);
 }
 
-int find_n_in_base(char pos, char *base)
+static int find_n_in_base(char pos, char *base)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ int find_n_in_base(char pos, char *base)
 	return (-1);
 }
 
-int skip_conditions(char *str, int *m)
+static int skip_conditions(char *str, int *m)
 {
 	int	i;
 
