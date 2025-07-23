@@ -83,7 +83,7 @@ int ft_basetoi(char * str, char * base)
 	result = 0;
 	while (str[i])
 	{
-		nbr_base = find_n_in_base(str[i], base);
+		nbr_base = find_n_in_base(ft_tolower(str[i]), base);
 		if (nbr_base < 0)
 			return (0);
 		result = result * base_size + nbr_base;
