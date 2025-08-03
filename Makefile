@@ -156,7 +156,6 @@ $(ARQUIVE): | $(BUILD_PATH)
 	@$(AR) $(ARQUIVE) $(OBJS)
 
 $(BUILD_PATH):
-	@printf "\n$(C_CYAN)Building library...$(C_STD)\n"
 	@mkdir $(BUILD_PATH)
 
 clean:
