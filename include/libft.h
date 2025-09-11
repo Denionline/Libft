@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/07/29 10:26:49 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/09/11 09:33:54 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+char	**ft_strtok(char const *s, char *delim);
 char	*ft_strrchr(const char *s, int c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_memcpy(void *dest, const void *src, size_t n);

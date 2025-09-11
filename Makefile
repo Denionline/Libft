@@ -68,6 +68,7 @@ FT_STR_FILES	+= ft_strmapi
 FT_STR_FILES	+= ft_strjoin
 FT_STR_FILES	+= ft_strdup
 FT_STR_FILES	+= ft_striteri
+FT_STR_FILES	+= ft_strtok
 
 FT_PUT_FILES        += ft_putchar_fd
 FT_PUT_FILES        += ft_putstr_fd
