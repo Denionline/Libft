@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/09/11 09:33:54 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/09/12 17:08:35 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_list
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
+int		ft_isspace(int c);
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
