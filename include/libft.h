@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/09/12 17:08:35 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/09/24 11:48:09 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strremove(char *string, char search);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *s);
