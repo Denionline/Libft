@@ -55,6 +55,7 @@ FT_TO_FILES		+= ft_atoi
 FT_TO_FILES		+= ft_itoa
 FT_TO_FILES		+= ft_basetoi
 
+FT_STR_FILES	+= ft_strcmp
 FT_STR_FILES	+= ft_strncmp
 FT_STR_FILES	+= ft_strlen
 FT_STR_FILES	+= ft_strlcpy
