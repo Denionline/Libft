@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 12:56:11 by dximenes          #+#    #+#             */
-/*   Updated: 2025/10/18 12:57:54 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/10/18 13:19:32 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	size_t	i;
 
 	i = 0;
-	while (((unsigned char)s1[i] || (unsigned char)s2[i]))
+	while (((unsigned char)s1[i] && (unsigned char)s2[i]))
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
