@@ -6,23 +6,19 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:28:45 by dximenes          #+#    #+#             */
-/*   Updated: 2025/04/14 21:14:50 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:58:12 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
+	int		size;
 
-	if (s)
-	{
-		i = 0;
-		while (s[i])
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
-	}
+	size = 0;
+	while (s && s[i])
+		size += ft_putchar_fd(s[i++], fd);
+	return (size);
 }
