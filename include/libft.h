@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/10/19 11:55:19 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:35:23 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t n_items, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_bzero(void *s, size_t n);
-int	ft_putchar_fd(char c, int fd);
-int	ft_putstr_fd(char *s, int fd);
-int	ft_putendl_fd(char *s, int fd);
-int	ft_putnbr_fd(int n, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putnbr_fd(int n, int fd);
 void	*ft_memset(void *buff, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 //bonus
