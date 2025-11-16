@@ -52,6 +52,7 @@ FT_IS_FILES		+= ft_isascii
 FT_TO_FILES		+= ft_toupper
 FT_TO_FILES		+= ft_tolower
 FT_TO_FILES		+= ft_atoi
+FT_TO_FILES		+= ft_atoll
 FT_TO_FILES		+= ft_itoa
 FT_TO_FILES		+= ft_basetoi
 
