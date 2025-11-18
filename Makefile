@@ -48,6 +48,7 @@ FT_IS_FILES		+= ft_isprint
 FT_IS_FILES		+= ft_isdigit
 FT_IS_FILES		+= ft_isspace
 FT_IS_FILES		+= ft_isascii
+FT_IS_FILES		+= is_strmatch
 
 FT_TO_FILES		+= ft_toupper
 FT_TO_FILES		+= ft_tolower

@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/11/18 15:46:01 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:51:14 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_list
 	struct s_list	*prev;
 }	t_list;
 
+int			is_strmatch(char *s1, char *s2);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isspace(int c);
