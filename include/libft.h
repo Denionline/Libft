@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 13:21:10 by dximenes          #+#    #+#             */
-/*   Updated: 2025/11/16 17:42:23 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/11/18 15:46:01 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <limits.h>
 
 # define TRUE 1
 # define FALSE 0
@@ -41,7 +42,7 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_basetoi(char *str, char *base);
 int			ft_atoi(const char *nbr);
-long long	ft_atoll(const char *nptr);
+long long	ft_atoll(char *nptr);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
