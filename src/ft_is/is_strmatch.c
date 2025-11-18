@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 17:44:36 by dximenes          #+#    #+#             */
-/*   Updated: 2025/11/18 17:51:03 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:53:03 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ int	is_strmatch(char *s1, char *s2)
 	int	ls1;
 	int	ls2;
 	int	size;
-	int	i;
 	
 	if ((!s1 && !s2))
 		return (TRUE);
 	ls1 = ft_strlen(s1);
 	ls2 = ft_strlen(s2);
-	size = s1;
-	if (s1 < s2)
-		size = s2;
+	size = ls1;
+	if (ls1 < ls2)
+		size = ls2;
 	return (!ft_strncmp(s1, s2, size));
 }
