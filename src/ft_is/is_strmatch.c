@@ -6,7 +6,7 @@
 /*   By: dximenes <dximenes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 17:44:36 by dximenes          #+#    #+#             */
-/*   Updated: 2025/11/18 19:04:52 by dximenes         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:06:07 by dximenes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	is_strmatch(char *s1, char *s2)
 	int	ls1;
 	int	ls2;
 	int	size;
-	
+
 	if (!s1 && !s2)
 		return (TRUE);
 	if (!s1 || !s2)
